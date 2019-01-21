@@ -11,8 +11,10 @@ public class movementscript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        
-		if(transform.position != target[current].position)
+        Vector3 direction = target[current].position;
+        Quaternion rotation = Quaternion.LookRotation(direction);
+        transform.rotation = Quaternion.Lerp(transform.rotation, rotation, rotateSpeed * Time.deltaTime);
+        if (transform.position != target[current].position)
         {
             Vector3 pos = Vector3.MoveTowards(transform.position, target[current].position, speed * Time.deltaTime);
             GetComponent<Rigidbody>().MovePosition(pos);
@@ -21,8 +23,6 @@ public class movementscript : MonoBehaviour {
         {
             current = (current + 1) % target.Length;
         }
-        Vector3 direction = target[current].position;
-        Quaternion rotation = Quaternion.LookRotation(direction);
-        transform.rotation = Quaternion.Lerp(transform.rotation, rotation, rotateSpeed * Time.deltaTime);
+        
     }
 }
