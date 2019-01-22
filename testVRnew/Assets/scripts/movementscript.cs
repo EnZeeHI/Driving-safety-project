@@ -28,13 +28,13 @@ public class movementscript : MonoBehaviour
         }
         else
         {
-            //current = (current + 1) % target.Length;
+            current = (current + 1) % target.Length;
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            current = (current + 1) % target.Length;
-            Debug.Log(current);
-        }
+        //if (Input.GetKeyDown(KeyCode.Space))
+        //{
+          //  current = (current + 1) % target.Length;
+            //Debug.Log(current);
+        //}
     }
 }

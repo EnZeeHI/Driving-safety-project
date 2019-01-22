@@ -12,8 +12,10 @@ ModelImporter:
     2100000: No Name
     2300000: Box001
     2300002: Sphere002
+    2300004: //RootNode
     3300000: Box001
     3300002: Sphere002
+    3300004: //RootNode
     4300000: Box001
     4300002: Sphere002
     7400000: Take 001
