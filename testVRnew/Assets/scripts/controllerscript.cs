@@ -2,10 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class aiscript : MonoBehaviour {
-
-    public movementscript movescript;
-
+public class controllerscript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
