@@ -8,14 +8,14 @@ public class movementscript : MonoBehaviour
 
     [SerializeField]
     [Range(6, 18)]
-    private float speed;
+    public float speed;
     [SerializeField]
     [Range(0.1f, 10f)]
-    private float rotateSpeed;
+    public float rotateSpeed;
 
     [SerializeField]
     private List<Transform> target;
-    private int current;
+    public int current;
 
     private Quaternion neededRotation;
 
