@@ -7,15 +7,15 @@ public class movementscript : MonoBehaviour
 {
 
     [SerializeField]
-    [Range(-200000000, 200000000)]
-    private float speed;
+    [Range(0, 20)]
+    public float speed;
     [SerializeField]
     [Range(0.1f, 10f)]
-    private float rotateSpeed;
+    public float rotateSpeed;
 
     [SerializeField]
     private List<Transform> target;
-    private int current;
+    public int current;
 
     private Quaternion neededRotation;
 
@@ -42,11 +42,5 @@ public class movementscript : MonoBehaviour
         {
             current = (current + 1) % target.Count;
         }
-
-        //    if (Input.GetKeyDown(KeyCode.Space))
-        //    {
-        //        current = (current + 1) % target.Count;
-        //        Debug.Log(current);
-        //    }
     }
 }
